@@ -1,0 +1,5 @@
+bazel-bazel-training
+**/*.orig
+bazel-bin
+bazel-out
+user.bazelrc

@@ -1,0 +1,15 @@
+# Main bazel configuration file
+
+#Configuration required for mingw toolchain
+build:mingw_cpp_config --extra_toolchains=//bazel/toolchains/mingw:mingw_toolchain
+build:mingw_cpp_config --platforms=//bazel/platform:windows_mingw
+build:mingw_cpp_config --incompatible_enable_cc_toolchain_resolution
+
+#Configuration required for intel toolchain
+build:intel_cpp_config --extra_toolchains=//bazel/toolchains/intel_compiler:intel_toolchain
+build:intel_cpp_config --platforms=//bazel/platform:windows_intel_compiler
+build:intel_cpp_config --incompatible_enable_cc_toolchain_resolution
+
+
+
+try-import %WORKSPACE%/user.bazelrc

@@ -1,0 +1,56 @@
+package(default_visibility = ["//visibility:public"])
+
+filegroup(
+    name = "empty",
+    srcs = [],
+)
+
+filegroup(
+    name = "all",
+    srcs = glob(["**"]),
+)
+
+filegroup(
+    name = "gcc",
+    srcs = ["bin/gcc.exe"]
+)
+
+filegroup(
+    name = "ld",
+    srcs = ["bin/ld.exe"]
+)
+
+filegroup(
+    name = "cpp",
+    srcs = ["bin/gcc.exe"]
+)
+
+filegroup(
+    name = "ar_file",
+    srcs = ["bin/ar.exe"]
+)
+
+filegroup(
+    name = "as_file",
+    srcs = ["bin/as.exe"]
+)
+
+filegroup(
+    name = "objcopy",
+    srcs = ["bin/objcopy.exe"]
+)
+
+filegroup(
+    name = "strip",
+    srcs = ["bin/strip.exe"]
+)
+
+filegroup(
+    name = "nm",
+    srcs = ["bin/nm.exe"]
+)
+
+filegroup(
+    name = "objdump",
+    srcs = ["bin/objdump.exe"]
+)
