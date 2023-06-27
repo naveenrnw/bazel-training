@@ -1,5 +1,6 @@
 load("@bazel_tools//tools/build_defs/cc:action_names.bzl", "ACTION_NAMES")
-load("@bazel_tools//tools/cpp:cc_toolchain_config_lib.bzl",
+load(
+    "@bazel_tools//tools/cpp:cc_toolchain_config_lib.bzl",
     "feature",
     "flag_group",
     "flag_set",
@@ -33,10 +34,10 @@ default_compiler_flags = feature(
             flag_groups = [
                 flag_group(
                     flags = [
-                       "-fsycl",
-                       "--sysroot=external/intel_compiler",
-                       "-Iexternal/intel_compiler/include"
-                       #"/EHsc",
+                        "-fsycl",
+                        "--sysroot=external/intel_compiler",
+                        "-Iexternal/intel_compiler/include",
+                        #"/EHsc",
                     ],
                 ),
             ],

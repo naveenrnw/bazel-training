@@ -1,5 +1,6 @@
 load("@bazel_tools//tools/build_defs/cc:action_names.bzl", "ACTION_NAMES")
-load("@bazel_tools//tools/cpp:cc_toolchain_config_lib.bzl",
+load(
+    "@bazel_tools//tools/cpp:cc_toolchain_config_lib.bzl",
     "feature",
     "flag_group",
     "flag_set",
@@ -43,7 +44,7 @@ default_compiler_flags = feature(
                         "-Wall",
                         "-std=c++14",
                         "-Wno-error=cpp",
-                        "-xc++"
+                        "-xc++",
                     ],
                 ),
             ],

@@ -6,17 +6,17 @@ exports_files(glob(["bin/*.bat"]))
 
 cc_toolchain(
     name = "cc_compiler_intel_toolchain",
-    toolchain_identifier = "intel-toolchain",
-    toolchain_config = "intel_compiler_toolchain_config",
+    all_files = "@intel_compiler//:all",
     ar_files = "@intel_compiler//:empty",
     as_files = "@intel_compiler//:empty",
-    all_files = "@intel_compiler//:all",
     compiler_files = "@intel_compiler//:empty",
     dwp_files = "@intel_compiler//:empty",
     linker_files = "@intel_compiler//:empty",
     objcopy_files = "@intel_compiler//:empty",
     strip_files = "@intel_compiler//:empty",
     supports_param_files = 1,
+    toolchain_config = "intel_compiler_toolchain_config",
+    toolchain_identifier = "intel-toolchain",
 )
 
 cc_toolchain_config(

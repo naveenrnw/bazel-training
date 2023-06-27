@@ -1,8 +1,9 @@
-load("@bazel_tools//tools/cpp:cc_toolchain_config_lib.bzl", "tool_path", "artifact_name_pattern")
+load("@bazel_tools//tools/cpp:cc_toolchain_config_lib.bzl", "artifact_name_pattern", "tool_path")
 load("//bazel/toolchains/intel_compiler:cc_action_config.bzl", "features")
 
 def _impl(ctx):
-    tool_paths = [ # NEW
+    tool_paths = [
+        # NEW
         tool_path(
             name = "gcc",
             path = "bin/icpx.bat",
@@ -34,7 +35,7 @@ def _impl(ctx):
         tool_path(
             name = "objdump",
             path = "bin/objdump.bat",
-        ),        
+        ),
     ]
 
     artifact_name_patterns = [

@@ -6,17 +6,17 @@ exports_files(glob(["bin/*.bat"]))
 
 cc_toolchain(
     name = "cc_compiler_mingw_toolchain",
-    toolchain_identifier = "mingw-toolchain",
-    toolchain_config = "mingw_toolchain_config",
+    all_files = "@mingw//:all",
     ar_files = "@mingw//:ar_file",
     as_files = "@mingw//:as_file",
-    all_files = "@mingw//:all",
     compiler_files = "@mingw//:gcc",
     dwp_files = "@mingw//:empty",
     linker_files = "@mingw//:empty",
     objcopy_files = "@mingw//:objcopy",
     strip_files = "@mingw//:strip",
     supports_param_files = 1,
+    toolchain_config = "mingw_toolchain_config",
+    toolchain_identifier = "mingw-toolchain",
 )
 
 cc_toolchain_config(
